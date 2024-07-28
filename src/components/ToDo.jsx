@@ -23,8 +23,12 @@ const ToDo = () => {
 
     {/* todo list*/}
     <div>
-        <TodoItems text="Learn Coding"/>
-        <TodoItems text="learn"/>
+    {todoList.map((item, index)=>{
+        return <TodoItems key={index} text={item.text} id={item.id} 
+        isComplete={item.isComplete} deleteTodo={deleteTodo} 
+        toggle={toggle} />
+    })}    
+        
         
 
     </div>
